@@ -21,7 +21,7 @@
     dcterms:description "Layer 2, data model. The exchange standard for health data over REST, and the Dutch profiles built on it."@en ;
     dcterms:publisher :publisher-source ;
     dcat:landingPage <https://hl7.org/fhir/> ;
-    dcat:dataset :hl7-fhir-5-0-0 , :hl7-fhir-0-12-1-beta-1 .
+    dcat:dataset :hl7-fhir-5-0-0 , :hl7-fhir-4-0-1 , :hl7-fhir-0-12-1-beta-1 .
 
 :hl7-fhir-5-0-0
     a dcat:Dataset ;
@@ -54,6 +54,34 @@
     dcterms:description "How to get it: Reference server and Java library, to run FHIR yourself."@en ;
     dcterms:type am:source-repository ;
     dcat:accessURL <https://hapifhir.io/> .
+
+:hl7-fhir-4-0-1
+    a dcat:Dataset ;
+    dcterms:title "FHIR R4"@en ;
+    dcterms:description "FHIR Release 4, technical correction 4.0.1. The version most Dutch implementations use, including the Nictiz nl-core profiles below."@en ;
+    dcat:version "4.0.1" ;
+    dcterms:issued "2019-10-30"^^xsd:date ;
+    dcterms:publisher :publisher-source ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcat:landingPage <https://hl7.org/fhir/R4/> ;
+    dcat:distribution :dist-fhir-r4-specification , :dist-r4-downloads , :dist-hapi-fhir .
+
+:dist-fhir-r4-specification
+    a dcat:Distribution ;
+    dcterms:title "FHIR R4 specification"@en ;
+    dcterms:description "How to get it: Read the resources, data types and terminology bindings online."@en ;
+    dcterms:type am:web-portal ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/html> ;
+    dcat:accessURL <https://hl7.org/fhir/R4/> .
+
+:dist-r4-downloads
+    a dcat:Distribution ;
+    dcterms:title "R4 downloads"@en ;
+    dcterms:description "How to get it: Definitions, examples and schemas as ZIP files; the full specification is fhir-spec.zip."@en ;
+    dcterms:type am:bulk-download ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+    dcat:accessURL <https://hl7.org/fhir/R4/downloads.html> ;
+    dcat:downloadURL <https://hl7.org/fhir/R4/fhir-spec.zip> .
 
 :hl7-fhir-0-12-1-beta-1
     a dcat:Dataset ;
