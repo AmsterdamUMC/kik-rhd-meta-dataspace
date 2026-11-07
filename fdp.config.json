@@ -1,0 +1,72 @@
+{
+  "$comment": "The one file that makes this FDP ecosystem yours. Engine code (scripts/, site/, workflows) reads everything instance-specific from here. In a copy made with 'Use this template', the first deploy fills in repository, siteUrl and baseIri.",
+  "name": "FDP Ecosystem Template",
+  "repository": "LeanFDP/fdp-ecosystem-template",
+  "branch": "main",
+  "siteUrl": "https://fdp.semscape.org/fdp-ecosystem-template/",
+  "baseIri": "https://raw.githubusercontent.com/LeanFDP/fdp-ecosystem-template/main/fdp/",
+  "indexFolder": "index",
+  "headline": "Every way to get the *data* you need",
+  "description": "A static FAIR Data Point that describes every way to obtain each resource: portals, APIs, SPARQL endpoints, bulk dumps, cloud buckets and copies in aggregators.",
+  "keywords": [
+    "FAIR Data Point",
+    "DCAT",
+    "data access",
+    "SPARQL",
+    "FAIR"
+  ],
+  "maintainer": {
+    "name": "Andra Waagmeester",
+    "github": "andrawaag",
+    "orcid": "0000-0001-9773-4008"
+  },
+  "orcidForm": {
+    "$comment": "Optional: the ORCID sign-in form in worker/ (see worker/README.md). url = the deployed worker; account = the GitHub account whose token the worker uses, so contributors.py credits the ORCID iD instead.",
+    "url": "",
+    "account": ""
+  },
+  "theme": {
+    "$comment": "Your house style. Colours, fonts, corners and logo here; anything else in assets/house-style.css, which loads last. See README → House style.",
+    "logo": "assets/logo.svg",
+    "favicon": "",
+    "headingFont": "Source Serif 4",
+    "bodyFont": "Source Sans 3",
+    "monoFont": "JetBrains Mono",
+    "radius": 12,
+    "buttonRadius": 999,
+    "stylesheet": "assets/house-style.css",
+    "navLinks": [],
+    "light": {
+      "primary": "#24507a",
+      "primaryHover": "#33689b",
+      "tint": "#f2f5f9",
+      "tint2": "#e3eaf3",
+      "text": "#142233",
+      "sub": "#566577",
+      "faint": "#8a97a6",
+      "border": "#dde4ec",
+      "codeBg": "#f5f7fa"
+    },
+    "dark": {
+      "primary": "#8db6e3",
+      "primaryHover": "#a9c9ec",
+      "bg": "#0e141b",
+      "surface": "#141c25",
+      "tint": "#17212c",
+      "tint2": "#1f2c3a",
+      "text": "#e6edf4",
+      "sub": "#a1afbe",
+      "faint": "#6c7a89",
+      "border": "#26323f",
+      "codeBg": "#111921"
+    }
+  },
+  "fair": {
+    "depth": "catalog"
+  },
+  "template": {
+    "repository": "LeanFDP/fdp-ecosystem-template",
+    "branch": "main",
+    "landing": "https://fdp.semscape.org/ecosystems/"
+  }
+}
