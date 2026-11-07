@@ -11,6 +11,42 @@
 <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/index/>
     dcterms:contributor :contributor-andrawaag .
 
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/amc-lab-codes-loinc-fdp/catalog>
+    dcterms:creator :contributor-andrawaag .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/atc-fdp/catalog>
+    dcterms:creator :contributor-andrawaag .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/hl7-fhir-fdp/catalog>
+    dcterms:creator :contributor-andrawaag .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/icd-11-fdp/catalog>
+    dcterms:creator :contributor-andrawaag .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/loinc-fdp/catalog>
+    dcterms:creator :contributor-andrawaag .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/meddra-fdp/catalog>
+    dcterms:creator :contributor-andrawaag .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/omop-cdm-fdp/catalog>
+    dcterms:creator :contributor-andrawaag .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/omop-vocabulary-mappings-fdp/catalog>
+    dcterms:creator :contributor-andrawaag .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/openehr-fdp/catalog>
+    dcterms:creator :contributor-andrawaag .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/ordo-fdp/catalog>
+    dcterms:creator :contributor-andrawaag .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/snomed-icd10-map-fdp/catalog>
+    dcterms:creator :contributor-andrawaag .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/snomed-loinc-extension-fdp/catalog>
+    dcterms:creator :contributor-andrawaag .
+
 <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/wikidata-fdp/catalog>
     dcterms:creator :contributor-andrawaag .
 
