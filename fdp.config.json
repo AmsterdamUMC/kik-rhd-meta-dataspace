@@ -1,10 +1,10 @@
 {
   "$comment": "The one file that makes this FDP ecosystem yours. Engine code (scripts/, site/, workflows) reads everything instance-specific from here. In a copy made with 'Use this template', the first deploy fills in repository, siteUrl and baseIri.",
-  "name": "FDP Ecosystem Template",
-  "repository": "LeanFDP/fdp-ecosystem-template",
+  "name": "Kik Rhd Meta Dataspace",
+  "repository": "AmsterdamUMC/kik-rhd-meta-dataspace",
   "branch": "main",
-  "siteUrl": "https://fdp.semscape.org/fdp-ecosystem-template/",
-  "baseIri": "https://raw.githubusercontent.com/LeanFDP/fdp-ecosystem-template/main/fdp/",
+  "siteUrl": "https://amsterdamumc.github.io/kik-rhd-meta-dataspace/",
+  "baseIri": "https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/",
   "indexFolder": "index",
   "headline": "Every way to get the *data* you need",
   "description": "A static FAIR Data Point that describes every way to obtain each resource: portals, APIs, SPARQL endpoints, bulk dumps, cloud buckets and copies in aggregators.",
@@ -16,9 +16,9 @@
     "FAIR"
   ],
   "maintainer": {
-    "name": "Andra Waagmeester",
+    "name": "",
     "github": "andrawaag",
-    "orcid": "0000-0001-9773-4008"
+    "orcid": ""
   },
   "orcidForm": {
     "$comment": "Optional: the ORCID sign-in form in worker/ (see worker/README.md). url = the deployed worker; account = the GitHub account whose token the worker uses, so contributors.py credits the ORCID iD instead.",
