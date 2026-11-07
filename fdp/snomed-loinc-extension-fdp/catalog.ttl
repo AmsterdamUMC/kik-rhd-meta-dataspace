@@ -1,0 +1,51 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix fdp:     <https://w3id.org/fdp/fdp-o#> .
+@prefix r3d:     <http://www.re3data.org/schema/3-0#> .
+@prefix am:      <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/vocab/access-methods#> .
+@prefix :        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/snomed-loinc-extension-fdp/> .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/snomed-loinc-extension-fdp/>
+    a fdp:MetadataService, r3d:Repository ;
+    dcterms:title "LOINC Ontology (SNOMED CT LOINC Extension) FAIR Data Point — KIK RHD Meta Dataspace"@en ;
+    dcterms:publisher :publisher-source ;
+    dcterms:modified "2026-11-07"^^xsd:date ;
+    fdp:hasCatalog :catalog .
+
+:catalog
+    a dcat:Catalog ;
+    dcterms:title "LOINC Ontology (SNOMED CT LOINC Extension)"@en ;
+    dcterms:description "Layer 3, mapping. LOINC terms modelled in SNOMED CT, published jointly by SNOMED International and Regenstrief as the LOINC Ontology (formerly the LOINC Extension). Links SNOMED CT and LOINC in this FDP."@en ;
+    dcterms:publisher :publisher-source ;
+    dcat:landingPage <https://docs.snomed.org/implementation-guides/loinc-implementation-guide> ;
+    dcat:dataset :loinc-ontology .
+
+:loinc-ontology
+    a dcat:Dataset ;
+    dcterms:title "LOINC Ontology"@en ;
+    dcterms:description "A SNOMED CT extension, so the SNOMED CT licence applies on top of the LOINC licence. Use requires a SNOMED CT Affiliate Licence; in the Netherlands it is free through Nictiz. This FDP describes how to get SNOMED CT and does not redistribute it."@en ;
+    dcat:version "live (described 2026-11-07)" ;
+    dcterms:publisher :publisher-source ;
+    dcat:distribution :dist-loinc-implementation-guide , :dist-release-files-via-mlds .
+
+:dist-loinc-implementation-guide
+    a dcat:Distribution ;
+    dcterms:title "LOINC implementation guide"@en ;
+    dcterms:description "How to get it: How LOINC terms are modelled in SNOMED CT, and how to use them with FHIR."@en ;
+    dcterms:type am:web-portal ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/html> ;
+    dcat:accessURL <https://docs.snomed.org/implementation-guides/loinc-implementation-guide> .
+
+:dist-release-files-via-mlds
+    a dcat:Distribution ;
+    dcterms:title "Release files via MLDS"@en ;
+    dcterms:description "How to get it: Download the LOINC Extension package with an affiliate licence."@en ;
+    dcterms:type am:bulk-download ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+    dcat:accessURL <https://mlds.ihtsdotools.org/> .
+
+:publisher-source a foaf:Organization ; foaf:name "SNOMED International and Regenstrief Institute"@en ; foaf:homepage <https://www.snomed.org/> .
+:publisher-curator a foaf:Organization ; foaf:name "Amsterdam UMC" ; foaf:homepage <https://www.amsterdamumc.org/> ; dcterms:identifier <https://ror.org/05grdyy37> .

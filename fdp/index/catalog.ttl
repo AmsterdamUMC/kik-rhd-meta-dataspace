@@ -11,8 +11,8 @@
 
 <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/index/>
     a fdp:MetadataService, r3d:Repository ;
-    dcterms:title "Kik Rhd Meta Dataspace — index"@en ;
-    dcterms:description "Index of this FAIR Data Point. Each sub-catalog describes one resource and lists every way to obtain it: native portal and APIs, bulk files, cloud buckets and copies in aggregators."@en ;
+    dcterms:title "KIK RHD Meta Dataspace — index"@en ;
+    dcterms:description "FAIR Data Point of the Reusable Health Data research line (KIK, Amsterdam UMC): the clinical terminologies, data models and mappings we use and publish, with every way to get them."@en ;
     dcterms:publisher :publisher-curator ;
     # Both addresses identify this FDP: the canonical IRI and the website that serves it (with text/turtle).
     dcterms:identifier "https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/index/" ,
@@ -20,19 +20,95 @@
     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
     dcat:landingPage <https://amsterdamumc.github.io/kik-rhd-meta-dataspace/> ;
     pim:persistencePolicy <https://github.com/AmsterdamUMC/kik-rhd-meta-dataspace/blob/main/PERSISTENCE.md> ;
-    dcterms:modified "2026-10-08"^^xsd:date ;
+    dcterms:modified "2026-11-07"^^xsd:date ;
     rdfs:seeAlso <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/vocab/access-methods.ttl> ,
         <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/index/contributors.ttl> ;
     # The catalog documents themselves, for clients that follow LDP containment.
     ldp:contains
-        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/wikidata-fdp/catalog.ttl> ;
+        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/loinc-fdp/catalog.ttl> ,
+        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/icd-11-fdp/catalog.ttl> ,
+        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/meddra-fdp/catalog.ttl> ,
+        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/atc-fdp/catalog.ttl> ,
+        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/ordo-fdp/catalog.ttl> ,
+        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/hl7-fhir-fdp/catalog.ttl> ,
+        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/omop-cdm-fdp/catalog.ttl> ,
+        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/openehr-fdp/catalog.ttl> ,
+        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/snomed-icd10-map-fdp/catalog.ttl> ,
+        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/snomed-loinc-extension-fdp/catalog.ttl> ,
+        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/omop-vocabulary-mappings-fdp/catalog.ttl> ,
+        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/amc-lab-codes-loinc-fdp/catalog.ttl> ;
     fdp:hasCatalog
-        :catalog-wikidata .
+        :catalog-loinc ,
+        :catalog-icd-11 ,
+        :catalog-meddra ,
+        :catalog-atc ,
+        :catalog-ordo ,
+        :catalog-hl7-fhir ,
+        :catalog-omop-cdm ,
+        :catalog-openehr ,
+        :catalog-snomed-icd10-map ,
+        :catalog-snomed-loinc-extension ,
+        :catalog-omop-vocabulary-mappings ,
+        :catalog-amc-lab-codes-loinc .
 
-:catalog-wikidata
+:catalog-loinc
     a dcat:Catalog ;
-    dcterms:title "Wikidata — example source (replace or remove)"@en ;
-    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    rdfs:seeAlso <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/wikidata-fdp/catalog.ttl> .
+    dcterms:title "LOINC"@en ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/loinc-fdp/catalog.ttl> .
 
-:publisher-curator a foaf:Person ; foaf:name "andrawaag" ; foaf:homepage <https://github.com/andrawaag> .
+:catalog-icd-11
+    a dcat:Catalog ;
+    dcterms:title "ICD-11"@en ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/icd-11-fdp/catalog.ttl> .
+
+:catalog-meddra
+    a dcat:Catalog ;
+    dcterms:title "MedDRA"@en ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/meddra-fdp/catalog.ttl> .
+
+:catalog-atc
+    a dcat:Catalog ;
+    dcterms:title "ATC classification"@en ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/atc-fdp/catalog.ttl> .
+
+:catalog-ordo
+    a dcat:Catalog ;
+    dcterms:title "ORDO: Orphanet Rare Disease Ontology"@en ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/ordo-fdp/catalog.ttl> .
+
+:catalog-hl7-fhir
+    a dcat:Catalog ;
+    dcterms:title "HL7 FHIR"@en ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/hl7-fhir-fdp/catalog.ttl> .
+
+:catalog-omop-cdm
+    a dcat:Catalog ;
+    dcterms:title "OMOP Common Data Model"@en ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/omop-cdm-fdp/catalog.ttl> .
+
+:catalog-openehr
+    a dcat:Catalog ;
+    dcterms:title "openEHR"@en ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/openehr-fdp/catalog.ttl> .
+
+:catalog-snomed-icd10-map
+    a dcat:Catalog ;
+    dcterms:title "SNOMED CT to ICD-10 map"@en ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/snomed-icd10-map-fdp/catalog.ttl> .
+
+:catalog-snomed-loinc-extension
+    a dcat:Catalog ;
+    dcterms:title "LOINC Ontology (SNOMED CT LOINC Extension)"@en ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/snomed-loinc-extension-fdp/catalog.ttl> .
+
+:catalog-omop-vocabulary-mappings
+    a dcat:Catalog ;
+    dcterms:title "OMOP Standardized Vocabularies and mappings"@en ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/omop-vocabulary-mappings-fdp/catalog.ttl> .
+
+:catalog-amc-lab-codes-loinc
+    a dcat:Catalog ;
+    dcterms:title "Amsterdam UMC lab codes to LOINC"@en ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/amc-lab-codes-loinc-fdp/catalog.ttl> .
+
+:publisher-curator a foaf:Organization ; foaf:name "Amsterdam UMC" ; foaf:homepage <https://www.amsterdamumc.org/> ; dcterms:identifier <https://ror.org/05grdyy37> .

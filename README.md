@@ -1,4 +1,4 @@
-# Kik Rhd Meta Dataspace
+# KIK RHD Meta Dataspace
 
 A static [FAIR Data Point](https://specs.fairdatapoint.org/) published from this repository and browsable at **<https://amsterdamumc.github.io/kik-rhd-meta-dataspace/>**.
 

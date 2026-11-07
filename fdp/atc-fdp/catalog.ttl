@@ -1,0 +1,50 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix fdp:     <https://w3id.org/fdp/fdp-o#> .
+@prefix r3d:     <http://www.re3data.org/schema/3-0#> .
+@prefix am:      <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/vocab/access-methods#> .
+@prefix :        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/atc-fdp/> .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/atc-fdp/>
+    a fdp:MetadataService, r3d:Repository ;
+    dcterms:title "ATC classification FAIR Data Point — KIK RHD Meta Dataspace"@en ;
+    dcterms:publisher :publisher-source ;
+    dcterms:modified "2026-11-07"^^xsd:date ;
+    fdp:hasCatalog :catalog .
+
+:catalog
+    a dcat:Catalog ;
+    dcterms:title "ATC classification"@en ;
+    dcterms:description "Layer 1, terminology. The Anatomical Therapeutic Chemical classification of medicines, with defined daily doses (DDD)."@en ;
+    dcterms:publisher :publisher-source ;
+    dcat:landingPage <https://atcddd.fhi.no/atc/> ;
+    dcat:dataset :atc-2026 .
+
+:atc-2026
+    a dcat:Dataset ;
+    dcterms:title "ATC/DDD Index 2026"@en ;
+    dcterms:description "The 2026 edition, last updated on 2026-01-20; a new edition appears every January. Free for searching; the electronic copy and commercial use carry a fee."@en ;
+    dcat:version "2026" ;
+    dcterms:publisher :publisher-source ;
+    dcat:distribution :dist-atc-ddd-index , :dist-order-the-atc-ddd-index .
+
+:dist-atc-ddd-index
+    a dcat:Distribution ;
+    dcterms:title "ATC/DDD index"@en ;
+    dcterms:description "How to get it: Search by code or name, or browse the hierarchy."@en ;
+    dcterms:type am:web-portal ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/html> ;
+    dcat:accessURL <https://atcddd.fhi.no/atc_ddd_index/> .
+
+:dist-order-the-atc-ddd-index
+    a dcat:Distribution ;
+    dcterms:title "Order the ATC/DDD index"@en ;
+    dcterms:description "How to get it: Order the electronic version from the WHO Collaborating Centre."@en ;
+    dcterms:type am:bulk-download ;
+    dcat:accessURL <https://atcddd.fhi.no/atc_ddd_index_and_guidelines/order/> .
+
+:publisher-source a foaf:Organization ; foaf:name "WHO Collaborating Centre for Drug Statistics Methodology"@en ; foaf:homepage <https://atcddd.fhi.no/> .
+:publisher-curator a foaf:Organization ; foaf:name "Amsterdam UMC" ; foaf:homepage <https://www.amsterdamumc.org/> ; dcterms:identifier <https://ror.org/05grdyy37> .
