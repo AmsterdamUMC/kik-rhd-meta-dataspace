@@ -1,0 +1,60 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix fdp:     <https://w3id.org/fdp/fdp-o#> .
+@prefix r3d:     <http://www.re3data.org/schema/3-0#> .
+@prefix am:      <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/vocab/access-methods#> .
+@prefix :        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/loinc-fdp/> .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/loinc-fdp/>
+    a fdp:MetadataService, r3d:Repository ;
+    dcterms:title "LOINC FAIR Data Point — KIK RHD Meta Dataspace"@en ;
+    dcterms:publisher :publisher-source ;
+    dcterms:modified "2026-11-07"^^xsd:date ;
+    fdp:hasCatalog :catalog .
+
+:catalog
+    a dcat:Catalog ;
+    dcterms:title "LOINC"@en ;
+    dcterms:description "Layer 1, terminology. Codes for laboratory tests and clinical observations."@en ;
+    dcterms:publisher :publisher-source ;
+    dcat:landingPage <https://loinc.org/> ;
+    dcat:dataset :loinc .
+
+:loinc
+    a dcat:Dataset ;
+    dcterms:title "LOINC"@en ;
+    dcterms:description "The full LOINC table with its linguistic variants, including the Dutch translation. Free of charge after accepting the LOINC licence."@en ;
+    dcat:version "live (described 2026-11-07)" ;
+    dcterms:publisher :publisher-source ;
+    dcterms:license <https://loinc.org/license/> ;
+    dcat:distribution :dist-searchloinc , :dist-loinc-fhir-terminology-server , :dist-loinc-release-download .
+
+:dist-searchloinc
+    a dcat:Distribution ;
+    dcterms:title "SearchLOINC"@en ;
+    dcterms:description "How to get it: Search codes online; a free loinc.org account is needed."@en ;
+    dcterms:type am:web-portal ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/html> ;
+    dcat:accessURL <https://loinc.org/search/> .
+
+:dist-loinc-fhir-terminology-server
+    a dcat:Distribution ;
+    dcterms:title "LOINC FHIR terminology server"@en ;
+    dcterms:description "How to get it: Query CodeSystem/$lookup and ValueSet/$expand with your loinc.org account."@en ;
+    dcterms:type am:rest-api ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> ;
+    dcat:accessURL <https://loinc.org/fhir/> .
+
+:dist-loinc-release-download
+    a dcat:Distribution ;
+    dcterms:title "LOINC release download"@en ;
+    dcterms:description "How to get it: Log in, accept the licence and download the release ZIP (CSV tables and accessories)."@en ;
+    dcterms:type am:bulk-download ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+    dcat:accessURL <https://loinc.org/downloads/> .
+
+:publisher-source a foaf:Organization ; foaf:name "Regenstrief Institute"@en ; foaf:homepage <https://www.regenstrief.org/> .
+:publisher-curator a foaf:Organization ; foaf:name "Amsterdam UMC" ; foaf:homepage <https://www.amsterdamumc.org/> ; dcterms:identifier <https://ror.org/05grdyy37> .

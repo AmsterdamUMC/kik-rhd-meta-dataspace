@@ -1,0 +1,83 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix fdp:     <https://w3id.org/fdp/fdp-o#> .
+@prefix r3d:     <http://www.re3data.org/schema/3-0#> .
+@prefix am:      <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/vocab/access-methods#> .
+@prefix :        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/hl7-fhir-fdp/> .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/hl7-fhir-fdp/>
+    a fdp:MetadataService, r3d:Repository ;
+    dcterms:title "HL7 FHIR FAIR Data Point — KIK RHD Meta Dataspace"@en ;
+    dcterms:publisher :publisher-source ;
+    dcterms:modified "2026-11-07"^^xsd:date ;
+    fdp:hasCatalog :catalog .
+
+:catalog
+    a dcat:Catalog ;
+    dcterms:title "HL7 FHIR"@en ;
+    dcterms:description "Layer 2, data model. The exchange standard for health data over REST, and the Dutch profiles built on it."@en ;
+    dcterms:publisher :publisher-source ;
+    dcat:landingPage <https://hl7.org/fhir/> ;
+    dcat:dataset :hl7-fhir-5-0-0 , :hl7-fhir-0-12-1-beta-1 .
+
+:hl7-fhir-5-0-0
+    a dcat:Dataset ;
+    dcterms:title "FHIR R5"@en ;
+    dcterms:description "The current FHIR release."@en ;
+    dcat:version "5.0.0" ;
+    dcterms:publisher :publisher-source ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcat:distribution :dist-fhir-r5-specification , :dist-r5-downloads , :dist-hapi-fhir .
+
+:dist-fhir-r5-specification
+    a dcat:Distribution ;
+    dcterms:title "FHIR R5 specification"@en ;
+    dcterms:description "How to get it: Read the resources, data types and terminology bindings online."@en ;
+    dcterms:type am:web-portal ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/html> ;
+    dcat:accessURL <https://hl7.org/fhir/R5/> .
+
+:dist-r5-downloads
+    a dcat:Distribution ;
+    dcterms:title "R5 downloads"@en ;
+    dcterms:description "How to get it: Definitions, examples and schemas as ZIP files."@en ;
+    dcterms:type am:bulk-download ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+    dcat:accessURL <https://hl7.org/fhir/R5/downloads.html> .
+
+:dist-hapi-fhir
+    a dcat:Distribution ;
+    dcterms:title "HAPI FHIR"@en ;
+    dcterms:description "How to get it: Reference server and Java library, to run FHIR yourself."@en ;
+    dcterms:type am:source-repository ;
+    dcat:accessURL <https://hapifhir.io/> .
+
+:hl7-fhir-0-12-1-beta-1
+    a dcat:Dataset ;
+    dcterms:title "Nictiz nl-core profiles on FHIR R4 (0.12.1-beta.1)"@en ;
+    dcterms:description "Dutch base profiles on FHIR R4, derived from the zibs (Dutch clinical information models)."@en ;
+    dcat:version "0.12.1-beta.1" ;
+    dcterms:publisher :publisher-source ;
+    dcat:landingPage <https://informatiestandaarden.nictiz.nl/> ;
+    dcat:distribution :dist-nictiz-information-standards , :dist-nictiz-fhir-r4-package-on .
+
+:dist-nictiz-information-standards
+    a dcat:Distribution ;
+    dcterms:title "Nictiz information standards"@en ;
+    dcterms:description "How to get it: Documentation per standard and release."@en ;
+    dcterms:type am:web-portal ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/html> ;
+    dcat:accessURL <https://informatiestandaarden.nictiz.nl/> .
+
+:dist-nictiz-fhir-r4-package-on
+    a dcat:Distribution ;
+    dcterms:title "Nictiz FHIR R4 package on Simplifier"@en ;
+    dcterms:description "How to get it: Install the NPM package with the FHIR tooling of your choice."@en ;
+    dcterms:type am:source-repository ;
+    dcat:accessURL <https://simplifier.net/packages/nictiz.fhir.nl.r4.nl-core> .
+
+:publisher-source a foaf:Organization ; foaf:name "HL7 International"@en ; foaf:homepage <https://www.hl7.org/> .
+:publisher-curator a foaf:Organization ; foaf:name "Amsterdam UMC" ; foaf:homepage <https://www.amsterdamumc.org/> ; dcterms:identifier <https://ror.org/05grdyy37> .

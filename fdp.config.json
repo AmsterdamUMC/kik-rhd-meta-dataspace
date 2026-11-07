@@ -1,24 +1,26 @@
 {
   "$comment": "The one file that makes this FDP ecosystem yours. Engine code (scripts/, site/, workflows) reads everything instance-specific from here. In a copy made with 'Use this template', the first deploy fills in repository, siteUrl and baseIri.",
-  "name": "Kik Rhd Meta Dataspace",
+  "name": "KIK RHD Meta Dataspace",
   "repository": "AmsterdamUMC/kik-rhd-meta-dataspace",
   "branch": "main",
   "siteUrl": "https://amsterdamumc.github.io/kik-rhd-meta-dataspace/",
   "baseIri": "https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/",
   "indexFolder": "index",
-  "headline": "Every way to get the *data* you need",
-  "description": "A static FAIR Data Point that describes every way to obtain each resource: portals, APIs, SPARQL endpoints, bulk dumps, cloud buckets and copies in aggregators.",
+  "headline": "Clinical standards, *reusable* by design",
+  "description": "FAIR Data Point of the Reusable Health Data research line (KIK, Amsterdam UMC): the clinical terminologies, data models and mappings we use and publish, with every way to get them.",
   "keywords": [
     "FAIR Data Point",
-    "DCAT",
-    "data access",
-    "SPARQL",
-    "FAIR"
+    "clinical standards",
+    "terminology",
+    "SNOMED CT",
+    "OMOP",
+    "mappings",
+    "Amsterdam UMC"
   ],
   "maintainer": {
-    "name": "",
+    "name": "Andra Waagmeester",
     "github": "andrawaag",
-    "orcid": ""
+    "orcid": "0000-0001-9773-4008"
   },
   "orcidForm": {
     "$comment": "Optional: the ORCID sign-in form in worker/ (see worker/README.md). url = the deployed worker; account = the GitHub account whose token the worker uses, so contributors.py credits the ORCID iD instead.",
@@ -26,39 +28,48 @@
     "account": ""
   },
   "theme": {
-    "$comment": "Your house style. Colours, fonts, corners and logo here; anything else in assets/house-style.css, which loads last. See README → House style.",
-    "logo": "assets/logo.svg",
-    "favicon": "",
-    "headingFont": "Source Serif 4",
-    "bodyFont": "Source Sans 3",
+    "$comment": "Amsterdam UMC / KIK house style. Colours from kik.amsterdamumc.org (#00778A, #003741, light blues) and the RHD logo (#108D52 green). Museo Sans Rounded is an Adobe Fonts licence of Amsterdam UMC; Nunito is the open look-alike. See INSTRUCTIONS.md, step 5.",
+    "logo": "assets/logo.png",
+    "favicon": "assets/favicon.png",
+    "headingFont": "Nunito",
+    "bodyFont": "Nunito",
     "monoFont": "JetBrains Mono",
-    "radius": 12,
-    "buttonRadius": 999,
+    "radius": 0,
+    "buttonRadius": 0,
     "stylesheet": "assets/house-style.css",
-    "navLinks": [],
+    "navLinks": [
+      {
+        "label": "Reusable health data",
+        "url": "https://kik.amsterdamumc.org/reusable-health-data/"
+      }
+    ],
     "light": {
-      "primary": "#24507a",
-      "primaryHover": "#33689b",
-      "tint": "#f2f5f9",
-      "tint2": "#e3eaf3",
-      "text": "#142233",
-      "sub": "#566577",
-      "faint": "#8a97a6",
-      "border": "#dde4ec",
-      "codeBg": "#f5f7fa"
+      "primary": "#00778a",
+      "primaryHover": "#003741",
+      "onPrimary": "#ffffff",
+      "bg": "#ffffff",
+      "surface": "#ffffff",
+      "tint": "#f2f8fc",
+      "tint2": "#e6f2fa",
+      "text": "#131516",
+      "sub": "#4b5b61",
+      "faint": "#5e6e75",
+      "border": "#d5e5ec",
+      "codeBg": "#f2f8fc"
     },
     "dark": {
-      "primary": "#8db6e3",
-      "primaryHover": "#a9c9ec",
-      "bg": "#0e141b",
-      "surface": "#141c25",
-      "tint": "#17212c",
-      "tint2": "#1f2c3a",
-      "text": "#e6edf4",
-      "sub": "#a1afbe",
-      "faint": "#6c7a89",
-      "border": "#26323f",
-      "codeBg": "#111921"
+      "primary": "#5cc6d8",
+      "primaryHover": "#8ad8e5",
+      "onPrimary": "#003741",
+      "bg": "#0b1c21",
+      "surface": "#10262c",
+      "tint": "#12292f",
+      "tint2": "#1a3840",
+      "text": "#e8f1f4",
+      "sub": "#a9bec5",
+      "faint": "#8aa1a8",
+      "border": "#23414a",
+      "codeBg": "#0e2227"
     }
   },
   "fair": {

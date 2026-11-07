@@ -1,0 +1,51 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix fdp:     <https://w3id.org/fdp/fdp-o#> .
+@prefix r3d:     <http://www.re3data.org/schema/3-0#> .
+@prefix am:      <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/vocab/access-methods#> .
+@prefix :        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/meddra-fdp/> .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/meddra-fdp/>
+    a fdp:MetadataService, r3d:Repository ;
+    dcterms:title "MedDRA FAIR Data Point — KIK RHD Meta Dataspace"@en ;
+    dcterms:publisher :publisher-source ;
+    dcterms:modified "2026-11-07"^^xsd:date ;
+    fdp:hasCatalog :catalog .
+
+:catalog
+    a dcat:Catalog ;
+    dcterms:title "MedDRA"@en ;
+    dcterms:description "Layer 1, terminology. The Medical Dictionary for Regulatory Activities, for adverse events in regulatory use."@en ;
+    dcterms:publisher :publisher-source ;
+    dcat:landingPage <https://www.meddra.org/> ;
+    dcat:dataset :meddra-29-1 .
+
+:meddra-29-1
+    a dcat:Dataset ;
+    dcterms:title "MedDRA 29.1"@en ;
+    dcterms:description "Released twice a year: x.0 in March and x.1 in September; 30.0 is due in March 2027. Use requires a subscription; academic and regulatory users can get it free of charge."@en ;
+    dcat:version "29.1" ;
+    dcterms:publisher :publisher-source ;
+    dcat:distribution :dist-meddra-subscription-and-downloads , :dist-how-to-use-meddra .
+
+:dist-meddra-subscription-and-downloads
+    a dcat:Distribution ;
+    dcterms:title "MedDRA subscription and downloads"@en ;
+    dcterms:description "How to get it: Apply for a subscription; subscribers download releases and use the web-based browser."@en ;
+    dcterms:type am:web-portal ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/html> ;
+    dcat:accessURL <https://www.meddra.org/subscription/process> .
+
+:dist-how-to-use-meddra
+    a dcat:Distribution ;
+    dcterms:title "How to use MedDRA"@en ;
+    dcterms:description "How to get it: Introductory guides and release notes, public."@en ;
+    dcterms:type am:web-portal ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/html> ;
+    dcat:accessURL <https://www.meddra.org/how-to-use/support-documentation> .
+
+:publisher-source a foaf:Organization ; foaf:name "ICH / MedDRA MSSO"@en ; foaf:homepage <https://www.meddra.org/> .
+:publisher-curator a foaf:Organization ; foaf:name "Amsterdam UMC" ; foaf:homepage <https://www.amsterdamumc.org/> ; dcterms:identifier <https://ror.org/05grdyy37> .

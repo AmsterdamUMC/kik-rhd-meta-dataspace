@@ -1,0 +1,60 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix fdp:     <https://w3id.org/fdp/fdp-o#> .
+@prefix r3d:     <http://www.re3data.org/schema/3-0#> .
+@prefix am:      <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/vocab/access-methods#> .
+@prefix :        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/ordo-fdp/> .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/ordo-fdp/>
+    a fdp:MetadataService, r3d:Repository ;
+    dcterms:title "ORDO: Orphanet Rare Disease Ontology FAIR Data Point — KIK RHD Meta Dataspace"@en ;
+    dcterms:publisher :publisher-source ;
+    dcterms:modified "2026-11-07"^^xsd:date ;
+    fdp:hasCatalog :catalog .
+
+:catalog
+    a dcat:Catalog ;
+    dcterms:title "ORDO: Orphanet Rare Disease Ontology"@en ;
+    dcterms:description "Layer 1, terminology. Rare diseases, their classification, genes and epidemiology, from Orphanet."@en ;
+    dcterms:publisher :publisher-source ;
+    dcat:landingPage <https://www.orphadata.com/ordo/> ;
+    dcat:dataset :ordo-4-9 .
+
+:ordo-4-9
+    a dcat:Dataset ;
+    dcterms:title "ORDO 4.9"@en ;
+    dcterms:description "The ontology form of the Orphanet nomenclature, released twice a year."@en ;
+    dcat:version "4.9" ;
+    dcterms:publisher :publisher-source ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcat:distribution :dist-orphanet , :dist-ordo-in-the-ebi-ontology-lookup , :dist-ordo-owl-file .
+
+:dist-orphanet
+    a dcat:Distribution ;
+    dcterms:title "Orphanet"@en ;
+    dcterms:description "How to get it: Search diseases in the Orphanet portal."@en ;
+    dcterms:type am:web-portal ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/html> ;
+    dcat:accessURL <https://www.orpha.net/> .
+
+:dist-ordo-in-the-ebi-ontology-lookup
+    a dcat:Distribution ;
+    dcterms:title "ORDO in the EBI Ontology Lookup Service"@en ;
+    dcterms:description "How to get it: Browse online, or use the OLS4 REST API."@en ;
+    dcterms:type am:rest-api ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> ;
+    dcat:accessURL <https://www.ebi.ac.uk/ols4/ontologies/ordo> .
+
+:dist-ordo-owl-file
+    a dcat:Distribution ;
+    dcterms:title "ORDO OWL file"@en ;
+    dcterms:description "How to get it: Download the OWL release from Orphadata."@en ;
+    dcterms:type am:rdf-dump ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ;
+    dcat:accessURL <https://www.orphadata.com/ordo/> .
+
+:publisher-source a foaf:Organization ; foaf:name "Orphanet"@en ; foaf:homepage <https://www.orpha.net/> .
+:publisher-curator a foaf:Organization ; foaf:name "Amsterdam UMC" ; foaf:homepage <https://www.amsterdamumc.org/> ; dcterms:identifier <https://ror.org/05grdyy37> .

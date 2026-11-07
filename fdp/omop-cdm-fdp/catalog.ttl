@@ -1,0 +1,72 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix fdp:     <https://w3id.org/fdp/fdp-o#> .
+@prefix r3d:     <http://www.re3data.org/schema/3-0#> .
+@prefix am:      <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/vocab/access-methods#> .
+@prefix :        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/omop-cdm-fdp/> .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/omop-cdm-fdp/>
+    a fdp:MetadataService, r3d:Repository ;
+    dcterms:title "OMOP Common Data Model FAIR Data Point — KIK RHD Meta Dataspace"@en ;
+    dcterms:publisher :publisher-source ;
+    dcterms:modified "2026-11-07"^^xsd:date ;
+    fdp:hasCatalog :catalog .
+
+:catalog
+    a dcat:Catalog ;
+    dcterms:title "OMOP Common Data Model"@en ;
+    dcterms:description "Layer 2, data model. The OHDSI patient-level data model for observational research, and Amsterdam UMC's work on it."@en ;
+    dcterms:publisher :publisher-source ;
+    dcat:landingPage <https://ohdsi.github.io/CommonDataModel/> ;
+    dcat:dataset :omop-cdm-5-4 .
+
+:omop-cdm-5-4
+    a dcat:Dataset ;
+    dcterms:title "OMOP CDM 5.4"@en ;
+    dcterms:description "Table definitions and conventions of OMOP CDM 5.4, and the tools around it."@en ;
+    dcat:version "5.4" ;
+    dcterms:publisher :publisher-source ;
+    dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dcat:distribution :dist-cdm-5-4-specification , :dist-commondatamodel-repository-ddl , :dist-whiterabbit , :dist-amstel-amsterdamumcdb-to-omop , :dist-ontop4omop-omop-as-sparql .
+
+:dist-cdm-5-4-specification
+    a dcat:Distribution ;
+    dcterms:title "CDM 5.4 specification"@en ;
+    dcterms:description "How to get it: Read the table and field definitions online."@en ;
+    dcterms:type am:web-portal ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/html> ;
+    dcat:accessURL <https://ohdsi.github.io/CommonDataModel/cdm54.html> .
+
+:dist-commondatamodel-repository-ddl
+    a dcat:Distribution ;
+    dcterms:title "CommonDataModel repository (DDL)"@en ;
+    dcterms:description "How to get it: DDL for PostgreSQL, SQL Server, Oracle and others."@en ;
+    dcterms:type am:source-repository ;
+    dcat:accessURL <https://github.com/OHDSI/CommonDataModel> .
+
+:dist-whiterabbit
+    a dcat:Distribution ;
+    dcterms:title "WhiteRabbit"@en ;
+    dcterms:description "How to get it: Profile a source database before mapping it to OMOP."@en ;
+    dcterms:type am:source-repository ;
+    dcat:accessURL <https://github.com/OHDSI/WhiteRabbit> .
+
+:dist-amstel-amsterdamumcdb-to-omop
+    a dcat:Distribution ;
+    dcterms:title "AMSTEL: AmsterdamUMCdb to OMOP"@en ;
+    dcterms:description "How to get it: Amsterdam UMC's ETL from AmsterdamUMCdb to OMOP CDM."@en ;
+    dcterms:type am:source-repository ;
+    dcat:accessURL <https://github.com/AmsterdamUMC/AMSTEL> .
+
+:dist-ontop4omop-omop-as-sparql
+    a dcat:Distribution ;
+    dcterms:title "Ontop4OMOP: OMOP as SPARQL"@en ;
+    dcterms:description "How to get it: Serve an OMOP database as a virtual RDF graph with Ontop."@en ;
+    dcterms:type am:source-repository ;
+    dcat:accessURL <https://github.com/AmsterdamUMC/Ontop4OMOP> .
+
+:publisher-source a foaf:Organization ; foaf:name "OHDSI"@en ; foaf:homepage <https://www.ohdsi.org/> .
+:publisher-curator a foaf:Organization ; foaf:name "Amsterdam UMC" ; foaf:homepage <https://www.amsterdamumc.org/> ; dcterms:identifier <https://ror.org/05grdyy37> .

@@ -1,0 +1,59 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix fdp:     <https://w3id.org/fdp/fdp-o#> .
+@prefix r3d:     <http://www.re3data.org/schema/3-0#> .
+@prefix am:      <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/vocab/access-methods#> .
+@prefix :        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/icd-11-fdp/> .
+
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/icd-11-fdp/>
+    a fdp:MetadataService, r3d:Repository ;
+    dcterms:title "ICD-11 FAIR Data Point — KIK RHD Meta Dataspace"@en ;
+    dcterms:publisher :publisher-source ;
+    dcterms:modified "2026-11-07"^^xsd:date ;
+    fdp:hasCatalog :catalog .
+
+:catalog
+    a dcat:Catalog ;
+    dcterms:title "ICD-11"@en ;
+    dcterms:description "Layer 1, terminology. WHO's International Classification of Diseases, 11th revision, for mortality and morbidity statistics."@en ;
+    dcterms:publisher :publisher-source ;
+    dcat:landingPage <https://icd.who.int/> ;
+    dcat:dataset :icd-11-2026-01 .
+
+:icd-11-2026-01
+    a dcat:Dataset ;
+    dcterms:title "ICD-11 MMS, 2026-01 release"@en ;
+    dcterms:description "The current MMS linearization of ICD-11, with its browser, coding tool and API."@en ;
+    dcat:version "2026-01" ;
+    dcterms:publisher :publisher-source ;
+    dcterms:license <https://creativecommons.org/licenses/by-nd/3.0/igo/> ;
+    dcat:distribution :dist-icd-11-browser , :dist-icd-11-api , :dist-downloads-spreadsheet-and-more .
+
+:dist-icd-11-browser
+    a dcat:Distribution ;
+    dcterms:title "ICD-11 browser"@en ;
+    dcterms:description "How to get it: Browse or search the classification; the coding tool helps find a code."@en ;
+    dcterms:type am:web-portal ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/html> ;
+    dcat:accessURL <https://icd.who.int/browse/latest-release/mms/en> .
+
+:dist-icd-11-api
+    a dcat:Distribution ;
+    dcterms:title "ICD-11 API"@en ;
+    dcterms:description "How to get it: Register for free API credentials, then use the REST API; a local container is also available."@en ;
+    dcterms:type am:rest-api ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> ;
+    dcat:accessURL <https://icd.who.int/icdapi> .
+
+:dist-downloads-spreadsheet-and-more
+    a dcat:Distribution ;
+    dcterms:title "Downloads (spreadsheet and more)"@en ;
+    dcterms:description "How to get it: In the browser, use 'Info' → 'Download' for the tabular list."@en ;
+    dcterms:type am:bulk-download ;
+    dcat:accessURL <https://icd.who.int/browse/latest-release/mms/en> .
+
+:publisher-source a foaf:Organization ; foaf:name "World Health Organization"@en ; foaf:homepage <https://www.who.int/> .
+:publisher-curator a foaf:Organization ; foaf:name "Amsterdam UMC" ; foaf:homepage <https://www.amsterdamumc.org/> ; dcterms:identifier <https://ror.org/05grdyy37> .
