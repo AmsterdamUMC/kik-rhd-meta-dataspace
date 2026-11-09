@@ -5,7 +5,7 @@
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix fdp:     <https://w3id.org/fdp/fdp-o#> .
 @prefix r3d:     <http://www.re3data.org/schema/3-0#> .
-@prefix am:      <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/vocab/access-methods#> .
+@prefix am:      <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/vocab/access-methods.ttl#> .
 @prefix :        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/amc-lab-codes-loinc-fdp/> .
 
 <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/amc-lab-codes-loinc-fdp/>
@@ -13,9 +13,9 @@
     dcterms:title "Amsterdam UMC lab codes to LOINC FAIR Data Point — KIK RHD Meta Dataspace"@en ;
     dcterms:publisher :publisher-source ;
     dcterms:modified "2026-11-07"^^xsd:date ;
-    fdp:hasCatalog :catalog .
+    fdp:hasCatalog <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/amc-lab-codes-loinc-fdp/catalog.ttl#catalog> .
 
-:catalog
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/amc-lab-codes-loinc-fdp/catalog.ttl#catalog>
     a dcat:Catalog ;
     dcterms:title "Amsterdam UMC lab codes to LOINC"@en ;
     dcterms:description "Institutional mapping. Amsterdam UMC's internal mapping from its laboratory codes to LOINC. The contents are confidential; the FDP publishes only that the mapping exists, so other institutions can coordinate."@en ;

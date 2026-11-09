@@ -5,7 +5,7 @@
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix fdp:     <https://w3id.org/fdp/fdp-o#> .
 @prefix r3d:     <http://www.re3data.org/schema/3-0#> .
-@prefix am:      <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/vocab/access-methods#> .
+@prefix am:      <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/vocab/access-methods.ttl#> .
 @prefix :        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/ordo-fdp/> .
 
 <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/ordo-fdp/>
@@ -13,9 +13,9 @@
     dcterms:title "ORDO: Orphanet Rare Disease Ontology FAIR Data Point — KIK RHD Meta Dataspace"@en ;
     dcterms:publisher :publisher-source ;
     dcterms:modified "2026-11-07"^^xsd:date ;
-    fdp:hasCatalog :catalog .
+    fdp:hasCatalog <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/ordo-fdp/catalog.ttl#catalog> .
 
-:catalog
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/ordo-fdp/catalog.ttl#catalog>
     a dcat:Catalog ;
     dcterms:title "ORDO: Orphanet Rare Disease Ontology"@en ;
     dcterms:description "Layer 1, terminology. Rare diseases, their classification, genes and epidemiology, from Orphanet."@en ;
