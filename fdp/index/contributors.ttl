@@ -47,7 +47,7 @@
 <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/snomed-loinc-extension-fdp/catalog.ttl#catalog>
     dcterms:creator :contributor-andrawaag .
 
-<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/wikidata-fdp/catalog>
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/wikidata-fdp/catalog.ttl#catalog>
     dcterms:creator :contributor-andrawaag .
 
 :contributor-andrawaag
