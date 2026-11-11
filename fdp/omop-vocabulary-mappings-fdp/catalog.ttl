@@ -5,7 +5,7 @@
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix fdp:     <https://w3id.org/fdp/fdp-o#> .
 @prefix r3d:     <http://www.re3data.org/schema/3-0#> .
-@prefix am:      <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/vocab/access-methods#> .
+@prefix am:      <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/vocab/access-methods.ttl#> .
 @prefix :        <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/omop-vocabulary-mappings-fdp/> .
 
 <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/omop-vocabulary-mappings-fdp/>
@@ -13,9 +13,9 @@
     dcterms:title "OMOP Standardized Vocabularies and mappings FAIR Data Point — KIK RHD Meta Dataspace"@en ;
     dcterms:publisher :publisher-source ;
     dcterms:modified "2026-11-07"^^xsd:date ;
-    fdp:hasCatalog :catalog .
+    fdp:hasCatalog <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/omop-vocabulary-mappings-fdp/catalog.ttl#catalog> .
 
-:catalog
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/omop-vocabulary-mappings-fdp/catalog.ttl#catalog>
     a dcat:Catalog ;
     dcterms:title "OMOP Standardized Vocabularies and mappings"@en ;
     dcterms:description "Layer 3, mapping. OHDSI's vocabularies with the mappings from source terminologies (SNOMED CT, LOINC, ATC, ICD-10 and others) to OMOP standard concepts."@en ;
