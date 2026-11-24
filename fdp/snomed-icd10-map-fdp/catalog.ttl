@@ -50,3 +50,8 @@
 
 :publisher-source a foaf:Organization ; foaf:name "SNOMED International"@en ; foaf:homepage <https://www.snomed.org/> .
 :publisher-curator a foaf:Organization ; foaf:name "Amsterdam UMC" ; foaf:homepage <https://www.amsterdamumc.org/> ; dcterms:identifier <https://ror.org/05grdyy37> .
+
+# Identifiers that FAIR tests look for: the canonical IRI and the address on the website.
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/snomed-icd10-map-fdp/> dcterms:identifier "https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/snomed-icd10-map-fdp/" , "https://amsterdamumc.github.io/kik-rhd-meta-dataspace/fdp/snomed-icd10-map-fdp/catalog.ttl" .
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/snomed-icd10-map-fdp/catalog.ttl#catalog> dcterms:identifier "https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/snomed-icd10-map-fdp/catalog.ttl#catalog" , "https://amsterdamumc.github.io/kik-rhd-meta-dataspace/fdp/snomed-icd10-map-fdp/catalog.ttl#catalog" .
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/snomed-icd10-map-fdp/catalog.ttl> foaf:primaryTopic <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/snomed-icd10-map-fdp/> .
