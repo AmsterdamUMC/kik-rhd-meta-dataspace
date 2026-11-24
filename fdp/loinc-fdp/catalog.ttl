@@ -58,3 +58,8 @@
 
 :publisher-source a foaf:Organization ; foaf:name "Regenstrief Institute"@en ; foaf:homepage <https://www.regenstrief.org/> .
 :publisher-curator a foaf:Organization ; foaf:name "Amsterdam UMC" ; foaf:homepage <https://www.amsterdamumc.org/> ; dcterms:identifier <https://ror.org/05grdyy37> .
+
+# Identifiers that FAIR tests look for: the canonical IRI and the address on the website.
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/loinc-fdp/> dcterms:identifier "https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/loinc-fdp/" , "https://amsterdamumc.github.io/kik-rhd-meta-dataspace/fdp/loinc-fdp/catalog.ttl" .
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/loinc-fdp/catalog.ttl#catalog> dcterms:identifier "https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/loinc-fdp/catalog.ttl#catalog" , "https://amsterdamumc.github.io/kik-rhd-meta-dataspace/fdp/loinc-fdp/catalog.ttl#catalog" .
+<https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/loinc-fdp/catalog.ttl> foaf:primaryTopic <https://raw.githubusercontent.com/AmsterdamUMC/kik-rhd-meta-dataspace/main/fdp/loinc-fdp/> .
